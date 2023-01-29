@@ -7,9 +7,10 @@ descobrido quando entrar em produção, mesmo que apenas no ambiente de desenvol
 O TypeScript entra nesse momento, já avisando ao desenvolvedor de possíveis erros no momento em que eles
 são cometidos. <br>
 Falhando ainda com a segunda regra, é possível passar apenas um dos valores que será aceito pelo JavaScript, não respeitando a regra de negócio e ainda permitindo que informações incompletas sejam passadas.<br><br>
-<b>Por Exemplo</b>:
+* <b>Por Exemplo</b>:<br>
 const negociacao = new Negociacao(new Date());<br>
-console.log(negociacao. volume) ;<br>
+console.log(negociacao.volume) ;<br>
+Nesse exemplo, o volume seria exibido como NaN porque não é passado seu parâmetro e o erro só seria descoberto em produção/run time.
 
 
 ## Regras de Negócio
