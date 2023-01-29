@@ -5,4 +5,14 @@ Por mais que possa ser adicionado, <b>com get</b>, a limitação da informação
 de ser declarada, ainda é possível declarar uma nova informação parecida com a anterior e o erro só vai ser
 descobrido quando entrar em produção, mesmo que apenas no ambiente de desenvolvimento. <br>
 O TypeScript entra nesse momento, já avisando ao desenvolvedor de possíveis erros no momento em que eles
-são cometidos. 
+são cometidos. <br>
+Falhando ainda com a segunda regra, é possível passar apenas um dos valores que será aceito pelo JavaScript, não respeitando a regra de negócio e ainda permitindo que informações incompletas sejam passadas.<br><br>
+<b>Por Exemplo</b>:
+const negociacao = new Negociacao(new Date());<br>
+console.log(negociacao. volume) ;<br>
+
+
+## Regras de Negócio
+* Não pode ser modificado depois de criado.
+* Obrigatoriamente precisa ter uma Data, Quantidade e Valor. 
+* Seu volume é calculado multiplicando-se a quantidade negociada no dia pelo valor negociado. 
