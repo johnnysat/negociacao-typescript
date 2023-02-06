@@ -12,6 +12,9 @@ const negociacao = new Negociacao(new Date());<br>
 console.log(negociacao.volume) ;<br>
 Nesse exemplo, o volume seria exibido como NaN porque não é passado seu parâmetro e o erro só seria descoberto em produção/run time.<br>
 
+## Traduzindo TypeScript para o navegador
+O navegador, nativamente, não lê typescript. Lê apenas Javascript. Para fazer o navegador entender, é preciso traduzir do typescript para o javascript. Através do arquivo "tsconfig.json" adicionamos o compilador para que ele pegue todos os arquivos da pasta APP (que estão como typescript) e traduza para javascript na pasta Dist (que é a pasta de distribuição).
+
 ## Regras de Negócio
 * Não pode ser modificado depois de criado.
 * Obrigatoriamente precisa ter uma Data, Quantidade e Valor. 
