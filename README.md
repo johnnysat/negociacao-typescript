@@ -15,8 +15,11 @@ Nesse exemplo, o volume seria exibido como NaN porque não é passado seu parâm
 ## Traduzindo TypeScript para o navegador
 O navegador, nativamente, não lê typescript. Lê apenas Javascript. Para fazer o navegador entender, é preciso traduzir do typescript para o javascript. Através do arquivo "tsconfig.json" adicionamos o compilador para que ele pegue todos os arquivos da pasta APP (que estão como typescript) e traduza para javascript na pasta Dist (que é a pasta de distribuição).
 
-## Tipos de Atributos
+## Tipos em Atributos
 Em Typescript existem tipos de atributos para definir se podem ser acessíveis e editáveis ou não. Ao não definir um tipo, ele automaticamente fica como 'public', permitindo que seja acessível e editável. Ao definir private, o próprio typescript não irá permitir que aquele atributo seja acessado.
+
+## Tipos em Método
+Em TypeScript exitem tipos em métodos também. Essa tipagem está relacionada ao retorno daquele método. Um método que não tem retorno nenhum, será do tipo "any". No arquivo Negociacao-Controllers há a tipagem do tipo Negociacao e ela é útil para que o único retorno do método seja do tipo Negociacao e não seja aceito nenhum outro tipo, já apresentando erro.
 
 ## Regras de Negócio
 * Não pode ser modificado depois de criado.
