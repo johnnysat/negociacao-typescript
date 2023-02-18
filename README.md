@@ -23,7 +23,8 @@ Em TypeScript exitem tipos em métodos também. Essa tipagem está relacionada a
 Além de definir os tipos, como por exemplo em "Negociacoes.js" onde é definido é um Array, é possível definir do que esse array é composto dentro do '<>'. Como, por exemplo, um Array de strings. Método():Array< string>. Assim como é possível adicionar outros tipos ao método, como number, boolean e outros.
 
 ## Apenas Leitura - Array
-Em typescript é possível utilizar o tipo de Array chamado "ReadonlyArray", onde ele apenas poderá ser lido. Isso impede que as informações sejam alteradas, excluídas ou perdidas.
+Em typescript é possível utilizar o tipo de Array chamado "ReadonlyArray", onde ele apenas poderá ser lido. Isso impede que as informações sejam alteradas, excluídas ou perdidas.<br>
+Ainda no typescript é possível alterar as formas de se declarar um Array. Ao invés da forma mais verbosa, onde ficaria -> ReadonlyArray< Negociacao> <-. É possível usar apenas readonly Negociacao[]. Por conta da caixa fechada, ele vai entender que é um array diretamente. 
 
 ## Regras de Negócio
 * Não pode ser modificado depois de criado.
