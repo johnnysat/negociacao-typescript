@@ -22,6 +22,9 @@ Em Typescript existem tipos de atributos para definir se podem ser acessíveis e
 Em TypeScript exitem tipos em métodos também. Essa tipagem está relacionada ao retorno daquele método. Um método que não tem retorno nenhum, será do tipo "any". No arquivo Negociacao-Controllers há a tipagem do tipo Negociacao e ela é útil para que o único retorno do método seja do tipo Negociacao e não seja aceito nenhum outro tipo, já apresentando erro.<br>
 Além de definir os tipos, como por exemplo em "Negociacoes.js" onde é definido é um Array, é possível definir do que esse array é composto dentro do '<>'. Como, por exemplo, um Array de strings. Método():Array< string>. Assim como é possível adicionar outros tipos ao método, como number, boolean e outros.
 
+## Apenas Leitura - Array
+Em typescript é possível utilizar o tipo de Array chamado "ReadonlyArray", onde ele apenas poderá ser lido. Isso impede que as informações sejam alteradas, excluídas ou perdidas.
+
 ## Regras de Negócio
 * Não pode ser modificado depois de criado.
 * Obrigatoriamente precisa ter uma Data, Quantidade e Valor. 
