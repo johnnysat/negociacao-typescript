@@ -29,6 +29,10 @@ Ainda no typescript é possível alterar as formas de se declarar um Array. Ao i
 ### Método readonly
 O método não funciona apenas para o array, mas vai funcionar quando você definir uma classe ou variável e quiser que ela possa ser apenas lida por aqueles que irão chamá-lo. No arquivo negociacao.ts nós fizemos a mudança para que o constructor passasse dados public para serem acessados fora do constructor, mas ao mesmo tempo como readonly para ser apenas leitura
 
+## Programção Defensiva
+Infelizmente o readonly não vai resolver todos os problemas de ser acessado e editado. É possível chamar o método Date nativo do javascript para alterar a data através do setDate(), mesmo com o readonly e o private setados. <br>
+Nessa situação, usamos o data.getTime(), que pega a data de hoje em milisegundos e o Data() é inteligente o suficiente para traduzir isso para a data que estamos aplicando a negociação. Quando tem o 'return data', a data que ele retorna é a minha que eu estou pedindo. Dessa forma, mesmo que o seja adicionado um setDate(), ele não irá alterar a data original e correta.
+
 ## Regras de Negócio
 * Não pode ser modificado depois de criado.
 * Obrigatoriamente precisa ter uma Data, Quantidade e Valor. 
